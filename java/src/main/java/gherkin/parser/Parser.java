@@ -177,9 +177,10 @@ public class Parser implements Listener {
         private Map<String, Map<String, String>> transitionMap;
 
         public Machine(Parser parser, String name, String uri) {
-            if (uri == null) {
-                throw new NullPointerException("uri");
-            }
+            // FIXME: maybe it isn't so bad that we don't havea uri for our purposes
+            // if (uri == null) {
+            //     throw new NullPointerException("uri");
+            // }
             this.parser = parser;
             this.name = name;
             this.state = name;
